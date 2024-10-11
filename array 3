@@ -1,0 +1,22 @@
+// Representasi papan catur (sederhana)
+const papanCatur = [
+  ['.', '.', '.'],
+  ['.', 'R', '.'],
+  ['.', '.', 'B']
+];
+
+// Fungsi untuk memeriksa skak
+function isCheck(papan, raja, benteng) {
+  // Implementasi logika untuk memeriksa skak
+  // ...
+}
+
+// Contoh penggunaan
+const posisiRaja = { baris: 1, kolom: 1 };
+const posisiBenteng = { baris: 2, kolom: 2 };
+
+if (isCheck(papanCatur, posisiRaja, posisiBenteng)) {
+  console.log("Raja dalam posisi skak");
+} else {
+  console.log("Raja aman");
+}

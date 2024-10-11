@@ -1,0 +1,26 @@
+// Array untuk menyimpan nama dan nilai mahasiswa
+const mahasiswa = [
+  { nama: "Andi", nilai: 80 },
+  { nama: "Budi", nilai: 75 },
+  { nama: "Cici", nilai: 90 },
+  ];
+
+let totalNilai = 0;
+for (let i = 0; i < mahasiswa.length; i++) {
+  totalNilai += mahasiswa[i].nilai;
+}
+let rataRata = totalNilai / mahasiswa.length;
+console.log("Rata-rata nilai:", rataRata);
+
+let lulus = mahasiswa.filter(m => m.nilai >= 70);
+console.log("Mahasiswa yang lulus:", lulus);
+
+let nilaiTertinggi = 0;
+let mahasiswaTerbaik = "";
+for (let i = 0; i < mahasiswa.length; i++) {
+  if (mahasiswa[i].nilai > nilaiTertinggi) {
+    nilaiTertinggi = mahasiswa[i].nilai;
+    mahasiswaTerbaik = mahasiswa[i].nama;
+  }
+}
+console.log("Mahasiswa dengan nilai tertinggi:", mahasiswaTerbaik); 

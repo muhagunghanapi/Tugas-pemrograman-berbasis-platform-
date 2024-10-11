@@ -1,0 +1,17 @@
+function isPalindrome(kata) {
+  // Ubah semua karakter menjadi huruf kecil dan hapus spasi
+  kata = kata.toLowerCase().replace(/\s/g, '');
+
+  // Balik kata
+  let kataBalik = kata.split('').reverse().join('');
+
+  // Bandingkan kata asli dengan kata balik
+  return kata === kataBalik;
+}
+
+// Contoh penggunaan
+let kata1 = "Kasur ini rusak";
+let kata2 = "Makan";
+
+console.log(kata1, "adalah palindrome:", isPalindrome(kata1));
+console.log(kata2, "adalah palindrome:", isPalindrome(kata2));

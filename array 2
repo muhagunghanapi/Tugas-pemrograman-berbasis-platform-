@@ -1,0 +1,24 @@
+// Array untuk menyimpan nama mahasiswa
+const namaMahasiswa = ["Andi", "Budi", "Cici", "Dedi", "Eka"];
+
+// Tampilkan nama mahasiswa yang diawali huruf A
+const mahasiswaA = namaMahasiswa.filter(nama => nama.startsWith("A"));
+console.log("Mahasiswa yang diawali huruf A:", mahasiswaA);
+
+// Cari nama mahasiswa terpanjang
+let namaTerpanjang = namaMahasiswa[0];
+for (let i = 1; i < namaMahasiswa.length; i++) {
+  if (namaMahasiswa[i].length > namaTerpanjang.length) {
+    namaTerpanjang = namaMahasiswa[i];
+  }
+}
+console.log("Nama mahasiswa terpanjang:", namaTerpanjang);
+
+// Cari nama mahasiswa terpendek
+let namaTerpendek = namaMahasiswa[0];
+for (let i = 1; i < namaMahasiswa.length; i++) {
+  if (namaMahasiswa[i].length < namaTerpendek.length) {
+    namaTerpendek = namaMahasiswa[i];
+  }
+}
+console.log("Nama mahasiswa terpendek:", namaTerpendek);

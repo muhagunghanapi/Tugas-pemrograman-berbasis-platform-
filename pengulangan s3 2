@@ -1,0 +1,18 @@
+function findNearestPalindrome(angka) {
+  let angkaAwal = angka;
+
+  while (true) {
+    angka++;
+    let angkaString = angka.toString();
+    let angkaBalik = angkaString.split('').reverse().join('');
+
+    if (angkaString === angkaBalik) {
+      return angka;
+    }
+  }
+}
+
+// Contoh penggunaan
+let inputAngka = 2345;
+let hasil = findNearestPalindrome(inputAngka);
+console.log("Angka palindrome terdekat dari", inputAngka, "adalah", hasil);

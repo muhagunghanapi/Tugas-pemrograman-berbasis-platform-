@@ -1,0 +1,27 @@
+function hitungKalori(jenisOlahraga, durasi) {
+  let kaloriPerMenit;
+
+  switch (jenisOlahraga) {
+    case "lari":
+      kaloriPerMenit = 60 / 5; // 60 kalori / 5 menit
+      break;
+    case "push-up":
+      kaloriPerMenit = 200 / 30; // 200 kalori / 30 menit
+      break;
+    case "plank":
+      kaloriPerMenit = 5;
+      break;
+    default:
+      return "Jenis olahraga tidak valid.";
+  }
+
+  let totalKalori = kaloriPerMenit * durasi;
+  return `Anda membakar ${totalKalori} kalori.`;
+}
+
+// Contoh penggunaan:
+let jenisOlahraga = prompt("Masukkan jenis olahraga (lari, push-up, plank):");
+let durasi = parseFloat(prompt("Masukkan durasi olahraga (dalam menit):"));
+
+let hasil = hitungKalori(jenisOlahraga, durasi);
+alert(hasil);
